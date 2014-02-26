@@ -15,8 +15,9 @@
     self = (LoadingIndicator*)[super initWithWebView:theWebView];
     if (self)
 	{
-        self.activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-        activityView.center=self.view.center;
+        activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        
+        activityView.center=self.webView.superview.center;
     }
     return self;
 }
@@ -24,7 +25,8 @@
 - (void)show:(CDVInvokedUrlCommand *)command {
     
     [activityView startAnimating];
-    [self.view addSubview:activityView];
+	[self.webView.superview addSubview:activityView];
+    
 }
 
 - (void)hide:(CDVInvokedUrlCommand *)command {
