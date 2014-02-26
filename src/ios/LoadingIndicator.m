@@ -17,7 +17,11 @@
 	{
         activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
         
-        activityView.center=self.webView.superview.center;
+        [activityView setBackgroundColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:.15]];
+        
+        [activityView setFrame:self.webView.bounds];
+        
+        activityView.center = self.webView.superview.center;
     }
     return self;
 }
