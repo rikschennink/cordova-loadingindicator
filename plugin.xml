@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+        id="nl.rikschennink.cordova.loadingindicator"
+        version="0.1.0">
+
+    <name>LoadingIndicator</name>
+    <description>LoadingIndicator Plugin</description>
+    <license>Apache</license>
+    <keywords>cordova,phonegap,loading,spinner,busy</keywords>
+
+    <js-module src="www/loadingindicator.js" name="loadingindicator">
+        <clobbers target="loadingindicator" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="LoadingIndicator">
+                <param name="ios-package" value="LoadingIndicator"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/LoadingIndicator.h" />
+        <source-file src="src/ios/LoadingIndicator.m" />
+
+    </platform>
+
+</plugin>
