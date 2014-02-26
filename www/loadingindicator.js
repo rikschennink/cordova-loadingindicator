@@ -4,43 +4,14 @@
 
     var exports = {},method;
 
-    var getColorAsFloat = function(color){
-        return color / 255.0;
-    };
-
-    var getColorStringFromArray = function(color) {
-        return color ? getColorAsFloat(color[0]) + ',' + getColorAsFloat(color[1]) + ',' + getColorAsFloat(color[2]) + ',' + (color[3] || 1.0) : null;
-    };
-
     var plugin = {
-        name:'TabBar',
+        name:'LoadingIndicator',
         api:{
-            'reset':function(){
+            'show':function(){
                 return null;
             },
-            'setup':function(options) {
-
-                if (!options){options = {};}
-
-                var tintDefault = getColorStringFromArray(options.tintDefault);
-                var tintSelected = getColorStringFromArray(options.tintSelected);
-
-                return {
-                    params:[tintDefault,tintSelected]
-                }
-            },
-            'addTab':function(id,title,icon,ontap) {
-
-                return {
-                    params:[id,title,icon],
-                    success:ontap || null
-                };
-
-            },
-            'selectTab':function(id) {
-                return {
-                    params:[id]
-                }
+            'hide':function(){
+                return null;
             }
         }
     };
