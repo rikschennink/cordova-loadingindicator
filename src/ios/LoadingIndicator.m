@@ -10,26 +10,19 @@
 
 @implementation LoadingIndicator
 
-- (CDVPlugin*)initWithWebView:(UIWebView*)theWebView
-{
-    self = (LoadingIndicator*)[super initWithWebView:theWebView];
-    if (self)
-	{
-        activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-        
-        [activityView setBackgroundColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:.15]];
-        
-        [activityView setFrame:self.webView.bounds];
-        
-        activityView.center = self.webView.superview.center;
-    }
-    return self;
+- (void)pluginInitialize {
+	
+    activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [activityView setBackgroundColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:.15]];
+    [activityView setFrame:self.webView.bounds];
+    activityView.center = self.webView.superview.center;
+	
 }
 
 - (void)show:(CDVInvokedUrlCommand *)command {
     
     [activityView startAnimating];
-	[self.webView.superview addSubview:activityView];
+    [self.webView.superview addSubview:activityView];
     
 }
 
