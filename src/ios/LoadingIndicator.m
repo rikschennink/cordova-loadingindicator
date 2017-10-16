@@ -1,8 +1,5 @@
 //
-//  LoadingIndicator
-//
-//  Created by Rik Schennink on 26/02/14.
-//
+//  LoadingIndicator.m
 //
 
 #import "LoadingIndicator.h"
