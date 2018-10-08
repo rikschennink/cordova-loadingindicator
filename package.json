@@ -1,0 +1,24 @@
+{
+  "name": "cordova-loadingindicator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rikschennink/cordova-loadingindicator.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova",
+    "cordova-ios"
+  ],
+  "author": "Rik Schennink <hello@rikschennink.nl> (http://rikschennink.nl)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rikschennink/cordova-loadingindicator/issues"
+  },
+  "homepage": "https://github.com/rikschennink/cordova-loadingindicator"
+}
